@@ -1,0 +1,39 @@
+.photo {
+  display: block;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.red {
+  background: var(--red);
+}
+
+.blue {
+  background: var(--blue);
+}
+
+.sky {
+  background: var(--sky);
+}
+
+.pink {
+  background: var(--pink);
+}
+
+.cream {
+  background: var(--cream);
+}
+
+.periwinkle {
+  background: var(--periwinkle);
+}
+
+.ink {
+  background: var(--ink);
+}

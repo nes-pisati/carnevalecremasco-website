@@ -1,0 +1,107 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--hero-gap);
+  max-width: var(--header-max);
+  margin-inline: auto;
+  padding: var(--hero-padding-top) var(--page-gutter) var(--hero-padding-bottom);
+}
+
+.copy {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: var(--hero-copy-gap);
+  min-width: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-hero-size);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--text-display-hero-leading);
+  letter-spacing: var(--text-display-hero-tracking);
+  overflow-wrap: break-word;
+}
+
+.lead {
+  max-width: var(--hero-lead-max);
+  color: var(--text-muted);
+  font-size: var(--text-lead-size);
+  line-height: var(--text-lead-leading);
+}
+
+.art {
+  position: relative;
+  flex: 1 1 100%;
+  height: var(--hero-art-height);
+}
+
+.disc,
+.half,
+.tile,
+.wave {
+  position: absolute;
+}
+
+.disc {
+  top: 0;
+  right: var(--hero-disc-right);
+  width: var(--hero-disc-size);
+  height: var(--hero-disc-size);
+  border-radius: var(--radius-round);
+  background: var(--red);
+}
+
+.half {
+  bottom: var(--space-10);
+  left: 0;
+  width: var(--hero-half-width);
+  height: calc(var(--hero-half-width) / 2);
+  border-radius: var(--hero-half-width) var(--hero-half-width) 0 0;
+  background: var(--blue);
+}
+
+.tile {
+  top: var(--hero-tile-top);
+  left: var(--hero-tile-left);
+  width: var(--hero-tile-size);
+  height: var(--hero-tile-size);
+  border-radius: var(--radius-tile);
+  background: var(--sky);
+  transform: rotate(20deg);
+}
+
+.photo {
+  position: absolute;
+  inset: var(--hero-photo-top) var(--hero-photo-right) var(--hero-photo-bottom) var(--hero-photo-left);
+  border-radius: var(--hero-photo-radius);
+}
+
+.wave {
+  right: 0;
+  bottom: 0;
+  width: var(--hero-wave-width);
+  height: var(--hero-wave-height);
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+@media (min-width: 901px) {
+  .copy {
+    flex: 1 1 560px;
+  }
+
+  .art {
+    flex: 1 1 520px;
+  }
+}

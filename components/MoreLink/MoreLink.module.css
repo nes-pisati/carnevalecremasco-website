@@ -1,0 +1,21 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  font-size: var(--text-more-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-nav-leading);
+}
+
+.light {
+  color: var(--ink);
+}
+
+.dark,
+.dark:hover {
+  color: var(--sky);
+}
+
+.dark:focus-visible {
+  outline-color: var(--sky);
+}

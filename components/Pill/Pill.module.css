@@ -1,0 +1,19 @@
+.pill {
+  display: inline-block;
+  padding: var(--pill-padding-block) var(--space-14);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-caption-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--text-caption-leading);
+}
+
+.light {
+  background: var(--surface-raised);
+  color: var(--ink);
+}
+
+.red {
+  background: var(--red);
+  color: var(--on-dark);
+  font-weight: var(--weight-bold);
+}

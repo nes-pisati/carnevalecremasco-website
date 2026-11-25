@@ -1,24 +1,29 @@
-.red {
+.red,
+.red:hover {
   background: var(--red);
   color: var(--on-dark);
 }
 
-.blue {
+.blue,
+.blue:hover {
   background: var(--blue);
   color: var(--on-dark);
 }
 
-.sky {
+.sky,
+.sky:hover {
   background: var(--sky);
   color: var(--ink);
 }
 
-.pink {
+.pink,
+.pink:hover {
   background: var(--pink);
   color: var(--ink);
 }
 
-.cream {
+.cream,
+.cream:hover {
   background: var(--cream);
   color: var(--ink);
 }

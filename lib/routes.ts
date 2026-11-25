@@ -11,6 +11,17 @@ export const routes = {
   cookiePolicy: "/privacy/#cookie",
 } as const;
 
+export const informazioniSections = {
+  percorso: "percorso",
+  biglietti: "biglietti",
+  comeArrivare: "come-arrivare",
+  parcheggi: "parcheggi",
+} as const;
+
+export function withAnchor(href: string, anchor: string): string {
+  return `${href}#${anchor}`;
+}
+
 function normalizePath(path: string): string {
   const withoutHash = path.split("#")[0];
   return withoutHash.endsWith("/") ? withoutHash : `${withoutHash}/`;
