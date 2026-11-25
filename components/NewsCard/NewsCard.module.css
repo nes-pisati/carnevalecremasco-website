@@ -1,0 +1,51 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--card-grid-gap);
+}
+
+.cell {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: var(--card-padding);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
+  text-decoration: none;
+}
+
+.photo {
+  height: var(--news-media-height);
+  border-radius: var(--radius-media);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: var(--news-body-padding);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-news-title-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-news-title-leading);
+}
+
+.text {
+  color: var(--text-muted);
+  font-size: var(--text-copy-size);
+  line-height: var(--text-body-leading);
+}
+
+@media (min-width: 901px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

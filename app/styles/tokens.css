@@ -241,6 +241,25 @@
   --panel-disc-offset: -50px;
   --stat-padding: var(--space-20);
 
+  --tag-padding-block: 5px;
+  --card-padding: var(--space-10);
+  --card-gap: var(--space-12);
+  --card-grid-gap: var(--space-16);
+  --scroller-item-width: 240px;
+  --carro-media-height: 200px;
+  --carro-body-padding: 0 var(--space-12) var(--space-14);
+  --news-media-height: 190px;
+  --news-body-padding: 0 var(--space-14) var(--space-18);
+  --bento-row-height: 150px;
+  --bento-gap: var(--space-10);
+  --play-disc-size: 64px;
+  --sponsors-radius: 32px;
+  --sponsors-padding: var(--space-24) var(--space-22);
+  --sponsors-gap: var(--space-18);
+  --sponsor-tile-width: 150px;
+  --sponsor-tile-height: 110px;
+  --sponsor-tile-gap: var(--space-12);
+
   --z-raised: 1;
   --z-header: 20;
   --z-dropdown: 30;
@@ -341,5 +360,16 @@
     --panel-disc-size: 240px;
     --panel-disc-offset: -60px;
     --stat-padding: var(--space-24);
+
+    --card-grid-gap: var(--space-20);
+    --carro-body-padding: 0 var(--space-10) var(--space-12);
+    --news-media-height: 210px;
+    --news-body-padding: 0 var(--space-14) var(--space-16);
+    --bento-row-height: 220px;
+    --bento-gap: var(--space-14);
+    --sponsors-radius: var(--radius-panel);
+    --sponsors-padding: var(--space-36) var(--space-40);
+    --sponsors-gap: var(--space-24);
+    --sponsor-tile-gap: var(--space-14);
   }
 }

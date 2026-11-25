@@ -32,6 +32,7 @@ export const iconPaths = {
   park: "M7 20V4h6a4 4 0 0 1 0 8H7",
   phone: "M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2",
   pin: "M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12zM12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
+  pause: "M7 5h4v14H7zM13 5h4v14h-4z",
   play: "M8 5v14l11-7z",
   press: "M4 5h13v14H6a2 2 0 0 1-2-2zM17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5",
   qr: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2",
@@ -47,4 +48,4 @@ export const iconPaths = {
 
 export type IconName = keyof typeof iconPaths;
 
-export const filledIcons: ReadonlySet<IconName> = new Set<IconName>(["play"]);
+export const filledIcons: ReadonlySet<IconName> = new Set<IconName>(["pause", "play"]);

@@ -1,0 +1,9 @@
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: var(--tag-padding-block) var(--space-12);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-tag-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-tag-leading);
+}

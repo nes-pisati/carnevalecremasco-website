@@ -11,6 +11,14 @@ export const routes = {
   cookiePolicy: "/privacy/#cookie",
 } as const;
 
+export function newsArticleRoute(slug: string): string {
+  return `${routes.news}${slug}/`;
+}
+
+export const fotoSections = {
+  video: "video",
+} as const;
+
 export const informazioniSections = {
   percorso: "percorso",
   biglietti: "biglietti",

@@ -4,6 +4,12 @@ import styles from "./Photo.module.css";
 
 export type PhotoPlaceholderColor = "red" | "blue" | "sky" | "pink" | "cream" | "periwinkle" | "ink";
 
+const PLACEHOLDER_CYCLE: readonly PhotoPlaceholderColor[] = ["red", "blue", "sky", "pink", "cream"];
+
+export function cyclePlaceholder(index: number): PhotoPlaceholderColor {
+  return PLACEHOLDER_CYCLE[index % PLACEHOLDER_CYCLE.length];
+}
+
 type PhotoProps = {
   photo: PhotoData;
   placeholderColor: PhotoPlaceholderColor;
