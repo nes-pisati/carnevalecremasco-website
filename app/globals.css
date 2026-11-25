@@ -36,8 +36,7 @@ dd {
   margin: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
+:where(ul[role="list"], ol[role="list"]) {
   padding: 0;
   list-style: none;
 }

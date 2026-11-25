@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  z-index: var(--z-header);
+}
+
+.desktopBar {
+  display: none;
+}
+
+.mobileBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--header-padding-block) var(--page-gutter);
+}
+
+@media (min-width: 901px) {
+  .desktopBar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-32);
+    max-width: var(--header-max);
+    margin-inline: auto;
+    padding: var(--header-padding-block) var(--page-gutter);
+  }
+
+  .mobileBar {
+    display: none;
+  }
+}

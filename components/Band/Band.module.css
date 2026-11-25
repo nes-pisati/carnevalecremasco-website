@@ -1,0 +1,14 @@
+.band {
+  margin-top: var(--band-space);
+  padding-block: var(--band-padding);
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.band a {
+  color: var(--on-dark);
+}
+
+.band a:hover {
+  color: var(--sky);
+}

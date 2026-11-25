@@ -1,0 +1,24 @@
+.red {
+  background: var(--red);
+  color: var(--on-dark);
+}
+
+.blue {
+  background: var(--blue);
+  color: var(--on-dark);
+}
+
+.sky {
+  background: var(--sky);
+  color: var(--ink);
+}
+
+.pink {
+  background: var(--pink);
+  color: var(--ink);
+}
+
+.cream {
+  background: var(--cream);
+  color: var(--ink);
+}

@@ -1,0 +1,12 @@
+.plate {
+  display: flex;
+  flex: 0 0 auto;
+  padding: var(--logo-plate-padding-block) var(--logo-plate-padding-inline);
+  border-radius: var(--logo-plate-radius);
+  background: var(--surface-raised);
+}
+
+.image {
+  width: auto;
+  height: var(--logo-height);
+}

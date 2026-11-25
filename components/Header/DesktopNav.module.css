@@ -1,0 +1,102 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-left: auto;
+  padding: var(--space-6);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  min-height: var(--touch-target-min);
+  padding: var(--space-10) var(--space-18);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--ink);
+  font-size: var(--text-nav-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--text-nav-leading);
+  text-decoration: none;
+}
+
+.active,
+.active:hover {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.open,
+.open:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + var(--dropdown-offset));
+  left: 0;
+  z-index: var(--z-dropdown);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: var(--dropdown-width);
+  margin: 0;
+  padding: var(--space-8);
+  border-radius: var(--radius-media);
+  background: var(--ink);
+  color: var(--on-dark);
+  list-style: none;
+}
+
+.dropdown[hidden] {
+  display: none;
+}
+
+.dropdownLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-10);
+  border-radius: var(--radius-tile);
+  color: var(--on-dark);
+  text-decoration: none;
+}
+
+.dropdownLink:hover,
+.dropdownLink[aria-current="page"] {
+  background: var(--on-dark-divider);
+  color: var(--on-dark);
+}
+
+.dropdownTitle {
+  display: block;
+  font-size: var(--text-body-sm-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-nav-leading);
+}
+
+.dropdownText {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--on-dark-muted);
+  font-size: var(--text-tag-size);
+  line-height: var(--text-tag-leading);
+}

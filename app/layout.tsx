@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
+import { SkipLink } from "@/components/SkipLink/SkipLink";
 import "./globals.css";
 
 const unbounded = localFont({
@@ -31,7 +34,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="it" className={`${unbounded.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SkipLink targetId="contenuto" />
+        <Header />
+        <main id="contenuto">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

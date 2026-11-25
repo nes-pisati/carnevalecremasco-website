@@ -1,7 +1,9 @@
+import { Section } from "@/components/Section/Section";
+
 export default function Home() {
   return (
-    <main>
+    <Section end>
       <h1>Carnevale Cremasco</h1>
-    </main>
+    </Section>
   );
 }
