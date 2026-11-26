@@ -1,11 +1,12 @@
 import type { ComponentProps } from "react";
 import styles from "./Section.module.css";
 
-type SectionProps = ComponentProps<"section"> & {
+type SectionProps = Omit<ComponentProps<"section">, "ref"> & {
   end?: boolean;
+  as?: "section" | "div";
 };
 
-export function Section({ end = false, className, ...props }: SectionProps) {
+export function Section({ end = false, as: Element = "section", className, ...props }: SectionProps) {
   const classes = [styles.section, end && styles.end, className].filter(Boolean).join(" ");
-  return <section className={classes} {...props} />;
+  return <Element className={classes} {...props} />;
 }

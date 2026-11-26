@@ -1,0 +1,49 @@
+.invite {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--invite-gap);
+  padding: var(--invite-padding);
+  overflow: hidden;
+  border-radius: var(--panel-radius);
+}
+
+.disc {
+  position: absolute;
+  right: var(--invite-disc-right);
+  bottom: var(--invite-disc-bottom);
+  width: var(--invite-disc-size);
+  height: var(--invite-disc-size);
+  border-radius: var(--radius-round);
+  opacity: 0.9;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  flex: 1 1 var(--invite-text-basis);
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-sub-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-heading-sub-leading);
+  letter-spacing: var(--text-heading-sub-tracking);
+}
+
+.body {
+  font-size: var(--text-copy-size);
+  line-height: var(--text-copy-leading);
+}
+
+.actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}

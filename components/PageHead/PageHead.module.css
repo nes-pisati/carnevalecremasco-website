@@ -1,0 +1,120 @@
+.head {
+  position: relative;
+  overflow: hidden;
+  padding: var(--pagehead-padding-top) 0 var(--pagehead-padding-bottom);
+}
+
+.copy {
+  position: relative;
+  z-index: var(--z-raised);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  max-width: var(--pagehead-copy-max);
+}
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--text-subtle);
+  font-size: var(--text-caption-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--text-caption-leading);
+}
+
+.crumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target-min);
+  color: var(--text-subtle);
+}
+
+.crumbItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-page-size);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--text-heading-page-leading);
+  letter-spacing: var(--text-heading-page-tracking);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.lead {
+  max-width: var(--lead-max);
+  color: var(--text-muted);
+  font-size: var(--text-lead-size);
+  line-height: var(--text-lead-leading);
+}
+
+.extra {
+  position: relative;
+  z-index: var(--z-raised);
+  margin-top: var(--space-28);
+}
+
+.art {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .title {
+    hyphens: manual;
+  }
+
+  .art {
+    position: absolute;
+    top: var(--pagehead-art-top);
+    right: var(--pagehead-art-right);
+    display: block;
+    width: var(--pagehead-art-width);
+    height: var(--pagehead-art-height);
+  }
+
+  .disc,
+  .half,
+  .tile {
+    position: absolute;
+  }
+
+  .disc {
+    top: 0;
+    right: 0;
+    width: var(--pagehead-disc-size);
+    height: var(--pagehead-disc-size);
+    border-radius: var(--radius-round);
+    background: var(--red);
+  }
+
+  .half {
+    bottom: 0;
+    left: 0;
+    width: var(--pagehead-half-width);
+    height: calc(var(--pagehead-half-width) / 2);
+    border-radius: var(--pagehead-half-width) var(--pagehead-half-width) 0 0;
+    background: var(--blue);
+  }
+
+  .tile {
+    top: var(--pagehead-tile-offset);
+    left: var(--pagehead-tile-offset);
+    width: var(--pagehead-tile-size);
+    height: var(--pagehead-tile-size);
+    border-radius: var(--radius-tile);
+    background: var(--sky);
+    transform: rotate(20deg);
+  }
+}

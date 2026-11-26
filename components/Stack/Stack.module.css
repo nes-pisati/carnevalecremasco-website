@@ -1,0 +1,16 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap12 {
+  gap: var(--space-12);
+}
+
+.gap16 {
+  gap: var(--space-16);
+}
+
+.gap24 {
+  gap: var(--space-24);
+}

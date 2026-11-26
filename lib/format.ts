@@ -34,7 +34,7 @@ function toDate(value: IsoDate): Date {
   return new Date(`${value}T00:00:00Z`);
 }
 
-function capitalize(text: string): string {
+export function capitalize(text: string): string {
   return text.charAt(0).toLocaleUpperCase(LOCALE) + text.slice(1);
 }
 
@@ -104,6 +104,12 @@ export function formatTimeRange(range: TimeRange): string {
   if (range.end === null) return `dalle ${formatTime(range.start, false)}`;
   const wholeHours = range.start.endsWith(":00") && range.end.endsWith(":00");
   return `${formatTime(range.start, wholeHours)}–${formatTime(range.end, wholeHours)}`;
+}
+
+export function formatTimeRangeLong(range: TimeRange): string {
+  const wholeHours = range.start.endsWith(":00") && (range.end === null || range.end.endsWith(":00"));
+  const start = `dalle ${formatTime(range.start, wholeHours)}`;
+  return range.end === null ? start : `${start} alle ${formatTime(range.end, wholeHours)}`;
 }
 
 export function formatFileSize(sizeInBytes: number | null): string {

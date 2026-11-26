@@ -1,0 +1,22 @@
+.notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-14);
+  max-width: var(--pagehead-copy-max);
+  padding: var(--notice-padding);
+  border-radius: var(--radius-media);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-sm-leading);
+}
+
+.disc {
+  display: flex;
+  flex: 0 0 var(--disc-sm);
+  align-items: center;
+  justify-content: center;
+  height: var(--disc-sm);
+  border-radius: var(--radius-round);
+  background: var(--surface-raised);
+}

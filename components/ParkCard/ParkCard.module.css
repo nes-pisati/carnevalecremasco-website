@@ -1,0 +1,51 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--park-gap);
+  padding: var(--park-padding);
+  border-radius: var(--radius-card);
+}
+
+.disc {
+  display: flex;
+  flex: 0 0 var(--park-disc);
+  align-items: center;
+  justify-content: center;
+  height: var(--park-disc);
+  border-radius: var(--radius-round);
+  background: var(--icon-disc);
+  color: var(--ink);
+}
+
+.solidDisc {
+  background: var(--surface-raised);
+}
+
+.eyebrow {
+  font-size: var(--text-tag-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-tag-leading);
+  letter-spacing: var(--text-eyebrow-tracking);
+  text-transform: uppercase;
+}
+
+.name {
+  margin: var(--space-4) 0 var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--text-card-title-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-card-title-leading);
+}
+
+.text {
+  font-size: var(--text-body-sm-size);
+  line-height: var(--text-body-sm-leading);
+}
+
+.text a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}

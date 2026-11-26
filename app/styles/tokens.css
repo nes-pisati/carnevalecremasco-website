@@ -52,7 +52,7 @@
   --text-stat-number-size: 1.625rem;
   --text-stat-number-leading: 1.2;
 
-  --text-day-number-size: 3rem;
+  --text-day-number-size: 2.625rem;
   --text-day-number-leading: 0.9;
   --text-day-number-tracking: -2px;
 
@@ -260,6 +260,54 @@
   --sponsor-tile-height: 110px;
   --sponsor-tile-gap: var(--space-12);
 
+  --anchor-offset: var(--space-24);
+  --text-label-size: 0.8125rem;
+  --text-label-tracking: 0.4px;
+  --text-eyebrow-tracking: 0.3px;
+  --text-list-leading: 1.45;
+  --text-fact-leading: 1.35;
+  --text-day-month-size: 1.125rem;
+  --text-day-heading-leading: 1.2;
+  --text-day-heading-tracking: -0.5px;
+
+  --pagehead-padding-top: var(--space-24);
+  --pagehead-padding-bottom: var(--space-40);
+  --pagehead-copy-max: 820px;
+  --pagehead-art-width: 240px;
+  --pagehead-art-height: 208px;
+  --pagehead-art-top: var(--space-24);
+  --pagehead-art-right: var(--space-32);
+  --pagehead-disc-size: 136px;
+  --pagehead-half-width: 160px;
+  --pagehead-tile-size: 52px;
+  --pagehead-tile-offset: var(--space-32);
+  --lead-max: 680px;
+  --notice-padding: var(--space-16) var(--space-18) var(--space-16) var(--space-14);
+
+  --day-gap: var(--space-24);
+  --day-padding: var(--space-16) var(--space-16) var(--space-32);
+  --day-date-width: 220px;
+  --day-date-padding: var(--space-16) var(--space-20);
+  --day-date-min-height: 0;
+  --day-body-gap: var(--space-22);
+  --day-body-padding: 0 var(--space-8);
+  --fact-padding: var(--space-10) var(--space-16) var(--space-10) var(--space-10);
+  --bullet-size: 10px;
+
+  --split-padding: var(--space-32) var(--space-24);
+  --split-gap: var(--space-28);
+  --park-padding: var(--space-22);
+  --park-gap: var(--space-16);
+  --park-disc: 48px;
+  --invite-padding: var(--space-32) var(--space-24);
+  --invite-gap: var(--space-24) var(--space-40);
+  --invite-text-basis: 100%;
+  --invite-disc-size: 110px;
+  --invite-disc-right: -40px;
+  --invite-disc-bottom: -50px;
+  --disc-contact: 34px;
+  --link-panel-padding: var(--space-40) var(--space-24);
+
   --z-raised: 1;
   --z-header: 20;
   --z-dropdown: 30;
@@ -271,7 +319,7 @@
     --text-display-hero-size: 4rem;
     --text-display-hero-tracking: -2px;
 
-    --text-heading-page-size: 3.5rem;
+    --text-heading-page-size: 3rem;
     --text-heading-page-leading: 1.04;
     --text-heading-page-tracking: -2px;
 
@@ -280,12 +328,12 @@
 
     --text-heading-sub-size: 1.4375rem;
 
-    --text-heading-day-size: 1.75rem;
+    --text-heading-day-size: 1.5rem;
 
 
     --text-stat-number-size: 1.875rem;
 
-    --text-day-number-size: 6rem;
+    --text-day-number-size: 5rem;
     --text-day-number-tracking: -4px;
 
     --text-quote-size: 1.4375rem;
@@ -371,5 +419,28 @@
     --sponsors-padding: var(--space-36) var(--space-40);
     --sponsors-gap: var(--space-24);
     --sponsor-tile-gap: var(--space-14);
+
+    --text-day-month-size: 1.25rem;
+
+    --pagehead-padding-top: var(--space-48);
+    --pagehead-padding-bottom: var(--space-64);
+    --notice-padding: var(--space-14) var(--space-20) var(--space-14) var(--space-14);
+
+    --day-gap: var(--space-40);
+    --day-padding: var(--space-20) var(--space-40) var(--space-36) var(--space-20);
+    --day-date-padding: var(--space-24);
+    --day-date-min-height: 250px;
+    --day-body-padding: var(--space-24) 0 0;
+
+    --split-padding: var(--space-44);
+    --split-gap: var(--space-40);
+    --park-padding: var(--space-24);
+    --park-gap: var(--space-18);
+    --park-disc: 56px;
+    --invite-padding: var(--space-36);
+    --invite-text-basis: 420px;
+    --invite-disc-size: 180px;
+    --invite-disc-right: -50px;
+    --invite-disc-bottom: -70px;
   }
 }

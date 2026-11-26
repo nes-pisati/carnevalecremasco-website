@@ -9,6 +9,11 @@
   padding: var(--date-ribbon-padding-block) var(--date-ribbon-padding-inline);
 }
 
+.panel {
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+
 .list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

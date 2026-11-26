@@ -25,6 +25,11 @@
   color: var(--ink);
 }
 
+.surface {
+  background: var(--surface);
+  color: var(--ink);
+}
+
 .blue,
 .blue:hover {
   background: var(--blue);

@@ -1,0 +1,9 @@
+.label {
+  color: var(--text-subtle);
+  font-family: var(--font-sans);
+  font-size: var(--text-label-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-tag-leading);
+  letter-spacing: var(--text-label-tracking);
+  text-transform: uppercase;
+}

@@ -3,7 +3,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { Icon, type IconName } from "@/components/Icon/Icon";
 import styles from "./Button.module.css";
 
-export type ButtonVariant = "primary" | "secondary" | "light" | "blue";
+export type ButtonVariant = "primary" | "secondary" | "light" | "blue" | "surface";
 
 type CommonProps = {
   variant?: ButtonVariant;
@@ -24,8 +24,12 @@ type ActionButtonProps = CommonProps &
 
 export type ButtonProps = LinkButtonProps | ActionButtonProps;
 
+export function buttonClassName(variant: ButtonVariant = "primary", className?: string): string {
+  return [styles.button, styles[variant], className].filter(Boolean).join(" ");
+}
+
 export function Button({ variant = "primary", icon, children, className, ...rest }: ButtonProps) {
-  const classes = [styles.button, styles[variant], className].filter(Boolean).join(" ");
+  const classes = buttonClassName(variant, className);
   const content = (
     <>
       {icon && <Icon name={icon} size={20} />}

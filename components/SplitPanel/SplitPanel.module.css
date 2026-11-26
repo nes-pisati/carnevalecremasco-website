@@ -1,0 +1,32 @@
+.split {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--split-gap);
+  padding: var(--split-padding);
+  overflow: hidden;
+  border-radius: var(--panel-radius);
+  color: var(--ink);
+}
+
+.raised {
+  background: var(--surface-raised);
+}
+
+.cream {
+  background: var(--cream);
+}
+
+.center {
+  align-self: center;
+}
+
+@media (min-width: 901px) {
+  .split {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+
+  .wide {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+}
