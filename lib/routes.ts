@@ -19,6 +19,19 @@ export const fotoSections = {
   video: "video",
 } as const;
 
+export const programmaSections = {
+  mercatini: "mercatini",
+  camperisti: "camperisti",
+} as const;
+
+export const convenzioniSections = {
+  pranzare: "pranzare",
+  alloggiare: "alloggiare",
+  gruppi: "gruppi",
+  turismo: "turismo",
+  visitare: "visitare",
+} as const;
+
 export const informazioniSections = {
   percorso: "percorso",
   biglietti: "biglietti",

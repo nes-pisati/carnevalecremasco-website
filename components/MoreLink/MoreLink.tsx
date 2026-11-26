@@ -10,8 +10,10 @@ type MoreLinkProps = {
 export function MoreLink({ href, label, tone = "light" }: MoreLinkProps) {
   return (
     <Link href={href} className={`${styles.link} ${styles[tone]}`}>
-      {label}
-      <span aria-hidden="true">{"\u00a0→"}</span>
+      <span>
+        {label}
+        <span aria-hidden="true">{"\u00a0→"}</span>
+      </span>
     </Link>
   );
 }

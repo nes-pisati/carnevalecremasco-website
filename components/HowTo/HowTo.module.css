@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-family: var(--font-display);
+  font-size: var(--text-card-title-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-card-title-leading);
+}
+
+.disc {
+  display: flex;
+  flex: 0 0 var(--disc-lg);
+  align-items: center;
+  justify-content: center;
+  height: var(--disc-lg);
+  border-radius: var(--radius-round);
+}
+
+.body {
+  color: var(--text-muted);
+  font-size: var(--text-copy-size);
+  line-height: var(--text-copy-leading);
+}

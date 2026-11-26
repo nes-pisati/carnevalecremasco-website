@@ -1,0 +1,117 @@
+.map {
+  position: relative;
+  min-height: var(--map-min-height);
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  color: var(--ink);
+}
+
+.routeMap {
+  background: var(--sky);
+}
+
+.offMap {
+  background: var(--periwinkle);
+}
+
+.route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.routeRoad,
+.routeDots {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.routeRoad {
+  stroke: var(--surface-raised);
+  stroke-width: 26;
+}
+
+.routeDots {
+  stroke: var(--red);
+  stroke-width: 8;
+  stroke-dasharray: 2 16;
+}
+
+.pin {
+  position: absolute;
+  top: var(--pin-y);
+  left: var(--pin-x);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  max-width: calc(100% - var(--pin-x) - var(--space-8));
+  padding: var(--map-pin-padding);
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  font-size: var(--text-caption-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-tag-leading);
+}
+
+.pinMark {
+  display: flex;
+  flex: 0 0 var(--map-pin-disc);
+  align-items: center;
+  justify-content: center;
+  height: var(--map-pin-disc);
+  border-radius: var(--radius-round);
+  font-family: var(--font-display);
+  font-size: var(--text-tag-size);
+  font-style: normal;
+  font-weight: var(--weight-extrabold);
+}
+
+.ink {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+.tag {
+  position: absolute;
+  bottom: var(--space-16);
+  left: var(--space-16);
+  padding: var(--space-8) var(--space-14);
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--on-dark);
+  font-size: var(--text-tag-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-tag-leading);
+}
+
+.off {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mapoff-padding);
+}
+
+.offCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-14);
+  max-width: var(--mapoff-card-max);
+  padding: var(--mapoff-card-padding);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
+}
+
+.offText {
+  font-size: var(--text-copy-size);
+  line-height: var(--text-copy-leading);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}

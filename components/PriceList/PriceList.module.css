@@ -1,0 +1,64 @@
+.card {
+  padding: var(--prices-padding);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
+}
+
+.table {
+  width: 100%;
+  margin-block: calc(-1 * var(--space-4));
+  border-collapse: separate;
+  border-spacing: 0 var(--space-4);
+}
+
+.row:nth-child(odd) > * {
+  background: var(--surface);
+}
+
+.name {
+  padding: var(--price-padding);
+  padding-right: 0;
+  border-radius: var(--radius-media) 0 0 var(--radius-media);
+  text-align: left;
+  font-weight: inherit;
+}
+
+.nameInner {
+  display: flex;
+  align-items: center;
+  gap: var(--price-gap);
+}
+
+.dot {
+  flex: 0 0 var(--price-dot-size);
+  height: var(--price-dot-size);
+  border-radius: var(--radius-round);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--text-price-name-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-body-leading);
+}
+
+.detail {
+  color: var(--text-muted);
+  font-size: var(--text-body-sm-size);
+  font-weight: var(--weight-regular);
+  line-height: var(--text-body-sm-leading);
+}
+
+.value {
+  padding: var(--price-padding);
+  padding-left: var(--price-gap);
+  border-radius: 0 var(--radius-media) var(--radius-media) 0;
+  font-family: var(--font-display);
+  font-size: var(--text-price-size);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--text-heading-sub-leading);
+  text-align: right;
+  white-space: nowrap;
+}

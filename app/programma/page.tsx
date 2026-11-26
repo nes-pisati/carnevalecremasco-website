@@ -21,7 +21,7 @@ import { SplitPanel } from "@/components/SplitPanel/SplitPanel";
 import { Stack } from "@/components/Stack/Stack";
 import { formatMonthsSpan, formatOrdinal, formatTimeRange, formatTimeRangeLong } from "@/lib/format";
 import { toTelHref } from "@/lib/phone";
-import { informazioniSections, routes, withAnchor } from "@/lib/routes";
+import { informazioniSections, programmaSections, routes, withAnchor } from "@/lib/routes";
 import { carnivalEventJsonLd } from "@/lib/structuredData";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import { getEvents } from "@/lib/wp/events";
@@ -82,7 +82,7 @@ export default async function ProgrammaPage() {
       )}
 
       {market && (
-        <Section id="mercatini" aria-labelledby="mercatini-title">
+        <Section id={programmaSections.mercatini} aria-labelledby="mercatini-title">
           <SectionHeader
             titleId="mercatini-title"
             title="Mercatini di Carnevale"
@@ -138,7 +138,7 @@ export default async function ProgrammaPage() {
         </Section>
       )}
 
-      <Section id="camperisti" aria-labelledby="camperisti-title">
+      <Section id={programmaSections.camperisti} aria-labelledby="camperisti-title">
         <SectionHeader titleId="camperisti-title" title="Raduno camperisti" subtitle="22ª edizione" />
         <SplitPanel
           tone="cream"

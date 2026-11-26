@@ -22,6 +22,26 @@
   background: var(--surface-raised);
 }
 
+.raised {
+  background: var(--surface-raised);
+  color: var(--ink);
+}
+
+.creamDisc {
+  background: var(--cream);
+}
+
+.letter {
+  font-family: var(--font-display);
+  font-size: var(--text-park-letter-size);
+  font-weight: var(--weight-extrabold);
+  line-height: 1;
+}
+
+.text a {
+  font-weight: var(--weight-bold);
+}
+
 .eyebrow {
   font-size: var(--text-tag-size);
   font-weight: var(--weight-bold);
