@@ -22,7 +22,7 @@ export function Stat({ value, label, tone = "light", valueColor = "ink", layout 
 }
 
 type StatBoxProps = {
-  title: string;
+  title?: string;
   tone?: StatTone;
   children: ReactNode;
 };
@@ -30,7 +30,7 @@ type StatBoxProps = {
 export function StatBox({ title, tone = "light", children }: StatBoxProps) {
   return (
     <div className={`${styles.stat} ${styles[tone]}`}>
-      <h3 className={styles.title}>{title}</h3>
+      {title && <h3 className={styles.title}>{title}</h3>}
       <div className={styles.content}>{children}</div>
     </div>
   );

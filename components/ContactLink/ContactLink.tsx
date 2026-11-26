@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { buttonClassName, type ButtonVariant } from "@/components/Button/Button";
 import { Icon, type IconName } from "@/components/Icon/Icon";
 import { googleMapsSearchUrl } from "@/lib/maps";
@@ -24,6 +25,24 @@ function contactHref(kind: ContactKind, value: string): string {
   return googleMapsSearchUrl(value);
 }
 
+function withEmailBreak(text: string): ReactNode {
+  const at = text.indexOf("@");
+  if (at < 0) return text;
+  return (
+    <>
+      {text.slice(0, at + 1)}
+      <wbr />
+      {text.slice(at + 1)}
+    </>
+  );
+}
+
+function displayText(kind: ContactKind, value: string | null, label?: string): ReactNode {
+  if (!value) return CONTACT_PLACEHOLDERS[kind];
+  if (label) return label;
+  return kind === "email" ? withEmailBreak(value) : value;
+}
+
 type ContactLinkProps = {
   kind: ContactKind;
   value: string | null;
@@ -43,7 +62,7 @@ export function ContactLink({ kind, value, label, appearance = "pill" }: Contact
       ) : (
         <Icon name={CONTACT_ICONS[kind]} size={20} />
       )}
-      {value ? (label ?? value) : CONTACT_PLACEHOLDERS[kind]}
+      <span>{displayText(kind, value, label)}</span>
     </>
   );
 
