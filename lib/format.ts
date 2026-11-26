@@ -38,6 +38,10 @@ export function capitalize(text: string): string {
   return text.charAt(0).toLocaleUpperCase(LOCALE) + text.slice(1);
 }
 
+export function decapitalize(text: string): string {
+  return text.charAt(0).toLocaleLowerCase(LOCALE) + text.slice(1);
+}
+
 export function formatNumber(value: number): string {
   return numberFormat.format(value);
 }

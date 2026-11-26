@@ -35,3 +35,9 @@
   background: var(--blue);
   color: var(--on-dark);
 }
+
+.dim,
+.dim:hover {
+  background: var(--on-dark-divider);
+  color: var(--on-dark);
+}

@@ -324,6 +324,16 @@
   --mapoff-card-padding: var(--space-24);
   --mapoff-card-max: 440px;
 
+  --index-pill-padding: var(--space-6) var(--space-20) var(--space-6) var(--space-6);
+  --text-index-number-size: 0.875rem;
+  --place-media-height: 170px;
+  --place-body-padding: var(--space-6) var(--space-14) var(--space-18);
+  --photo-grid-gap: var(--space-10);
+  --photo-grid-tile-height: 140px;
+  --photo-grid-wide-height: 240px;
+  --stat-inline-label-max: 287px;
+  --visit-gap: var(--space-16);
+
   --z-raised: 1;
   --z-header: 20;
   --z-dropdown: 30;
@@ -470,5 +480,10 @@
     --map-min-height: 440px;
     --mapoff-padding: var(--space-24);
     --mapoff-card-padding: var(--space-28);
+
+    --place-body-padding: var(--space-4) var(--space-14) var(--space-16);
+    --photo-grid-gap: var(--space-12);
+    --photo-grid-tile-height: 200px;
+    --visit-gap: var(--space-40);
   }
 }

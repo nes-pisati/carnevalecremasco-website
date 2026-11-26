@@ -6,16 +6,32 @@ import styles from "./FeaturePanel.module.css";
 type FeaturePanelProps = {
   title: ReactNode;
   titleId?: string;
+  eyebrow?: string;
   children: ReactNode;
   link?: { href: string; label: string };
+  actions?: ReactNode;
   aside?: ReactNode;
+  discColor?: "red" | "blue";
+  align?: "center" | "start";
 };
 
-export function FeaturePanel({ title, titleId, children, link, aside }: FeaturePanelProps) {
+export function FeaturePanel({
+  title,
+  titleId,
+  eyebrow,
+  children,
+  link,
+  actions,
+  aside,
+  discColor = "red",
+  align = "center",
+}: FeaturePanelProps) {
+  const classes = [styles.panel, align === "start" && styles.alignStart].filter(Boolean).join(" ");
   return (
-    <div className={styles.panel}>
-      <span className={styles.disc} aria-hidden="true" />
+    <div className={classes}>
+      <span className={`${styles.disc} ${styles[discColor]}`} aria-hidden="true" />
       <div className={styles.text}>
+        {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
         <SectionTitle id={titleId}>{title}</SectionTitle>
         <div className={styles.body}>{children}</div>
         {link && (
@@ -23,12 +39,13 @@ export function FeaturePanel({ title, titleId, children, link, aside }: FeatureP
             <MoreLink href={link.href} label={link.label} tone="dark" />
           </div>
         )}
+        {actions && <div className={styles.actions}>{actions}</div>}
       </div>
       {aside && <div className={styles.aside}>{aside}</div>}
     </div>
   );
 }
 
-export function StatGrid({ children }: { children: ReactNode }) {
-  return <div className={styles.stats}>{children}</div>;
+export function StatGrid({ children, columns = 2 }: { children: ReactNode; columns?: 1 | 2 }) {
+  return <div className={`${styles.stats} ${columns === 1 ? styles.single : ""}`}>{children}</div>;
 }

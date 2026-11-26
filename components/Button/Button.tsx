@@ -3,7 +3,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { Icon, type IconName } from "@/components/Icon/Icon";
 import styles from "./Button.module.css";
 
-export type ButtonVariant = "primary" | "secondary" | "light" | "blue" | "surface";
+export type ButtonVariant = "primary" | "secondary" | "light" | "blue" | "surface" | "dim";
 
 type CommonProps = {
   variant?: ButtonVariant;
