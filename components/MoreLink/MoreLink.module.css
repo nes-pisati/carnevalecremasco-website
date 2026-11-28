@@ -7,6 +7,14 @@
   line-height: var(--text-nav-leading);
 }
 
+.button {
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: start;
+  text-decoration: underline;
+}
+
 .light {
   color: var(--ink);
 }

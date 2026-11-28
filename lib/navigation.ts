@@ -63,7 +63,7 @@ export const mainNavigation: NavItem[] = [
         color: "sky",
       },
       {
-        label: "Foto e video",
+        label: "Foto",
         description: "Le immagini delle sfilate",
         href: routes.foto,
         icon: "camera",
@@ -103,7 +103,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Il Carnevale",
     links: [
       { label: "Storia del Carnevale", href: routes.storia },
-      { label: "Foto e video", href: routes.foto },
+      { label: "Foto", href: routes.foto },
       { label: "News", href: routes.news },
     ],
   },

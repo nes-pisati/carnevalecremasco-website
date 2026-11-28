@@ -22,17 +22,18 @@ type SectionHeaderProps = {
   titleId?: string;
   subtitle?: ReactNode;
   link?: { href: string; label: string };
+  action?: ReactNode;
   tone?: Tone;
 };
 
-export function SectionHeader({ title, titleId, subtitle, link, tone = "light" }: SectionHeaderProps) {
+export function SectionHeader({ title, titleId, subtitle, link, action, tone = "light" }: SectionHeaderProps) {
   return (
     <div className={`${styles.header} ${styles[tone]}`}>
       <div>
         <SectionTitle id={titleId}>{title}</SectionTitle>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
       </div>
-      {link && <MoreLink href={link.href} label={link.label} tone={tone} />}
+      {action ?? (link && <MoreLink href={link.href} label={link.label} tone={tone} />)}
     </div>
   );
 }

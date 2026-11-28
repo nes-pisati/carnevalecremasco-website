@@ -1,0 +1,7 @@
+section.gallery {
+  padding-top: var(--space-24);
+}
+
+.muted {
+  color: var(--text-muted);
+}

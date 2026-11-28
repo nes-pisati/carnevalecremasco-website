@@ -4,7 +4,7 @@ export const routes = {
   informazioni: "/informazioni/",
   convenzioni: "/convenzioni/",
   storia: "/storia/",
-  foto: "/foto-e-video/",
+  foto: "/foto/",
   news: "/news/",
   contatti: "/contatti/",
   privacy: "/privacy/",
@@ -16,7 +16,8 @@ export function newsArticleRoute(slug: string): string {
 }
 
 export const fotoSections = {
-  video: "video",
+  foto: "foto",
+  seguici: "seguici",
 } as const;
 
 export const storiaSections = {

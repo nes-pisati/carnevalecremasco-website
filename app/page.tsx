@@ -15,7 +15,7 @@ import { PartnerLogo } from "@/components/SponsorSlider/PartnerLogo";
 import { SponsorSlider } from "@/components/SponsorSlider/SponsorSlider";
 import { Stat } from "@/components/Stat/Stat";
 import { formatMonthsSpan, formatOrdinal } from "@/lib/format";
-import { fotoSections, informazioniSections, routes, withAnchor } from "@/lib/routes";
+import { informazioniSections, routes, withAnchor } from "@/lib/routes";
 import { visitInfoCards } from "@/lib/visitInfo";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import { getEvents } from "@/lib/wp/events";
@@ -106,22 +106,16 @@ export default async function Home() {
         </Section>
       )}
 
-      {bentoPhotos.length > 0 && latestGallery && (
+      {bentoPhotos.length > 0 && (
         <Band aria-labelledby="foto-title">
           <SectionHeader
             titleId="foto-title"
-            title="Foto e video"
+            title="Foto"
             subtitle="Le domeniche di festa in piazza"
-            link={{ href: routes.foto, label: "Tutte le foto e i video" }}
+            link={{ href: routes.foto, label: "Tutte le foto" }}
             tone="dark"
           />
-          <PhotoBento
-            photos={bentoPhotos}
-            video={{
-              href: withAnchor(routes.foto, fotoSections.video),
-              label: `Guarda il video: la sfilata del ${latestGallery.editionYear}`,
-            }}
-          />
+          <PhotoBento photos={bentoPhotos} />
         </Band>
       )}
 

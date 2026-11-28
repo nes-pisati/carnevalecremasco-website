@@ -3,7 +3,7 @@ import { fillClass, type AccentColor } from "@/components/fills";
 import styles from "./InviteBox.module.css";
 
 type InviteBoxProps = {
-  color: AccentColor;
+  color: AccentColor | "raised";
   discColor: AccentColor;
   title: string;
   titleAs?: "h2" | "h3";
@@ -13,7 +13,7 @@ type InviteBoxProps = {
 
 export function InviteBox({ color, discColor, title, titleAs: Title = "h3", children, actions }: InviteBoxProps) {
   return (
-    <div className={`${styles.invite} ${fillClass(color)}`}>
+    <div className={`${styles.invite} ${color === "raised" ? styles.raised : fillClass(color)}`}>
       <span className={`${styles.disc} ${fillClass(discColor)}`} aria-hidden="true" />
       <div className={styles.text}>
         <Title className={styles.title}>{title}</Title>

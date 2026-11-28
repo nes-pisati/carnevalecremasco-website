@@ -5,7 +5,7 @@ import styles from "./SocialLinks.module.css";
 
 type SocialLinksProps = {
   links: SocialLink[];
-  tone?: "light" | "dark";
+  tone?: "light" | "surface" | "dark";
 };
 
 export function SocialLinks({ links, tone = "light" }: SocialLinksProps) {

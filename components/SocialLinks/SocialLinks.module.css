@@ -24,6 +24,11 @@
   color: var(--ink);
 }
 
+.surface .link {
+  background: var(--surface);
+  color: var(--ink);
+}
+
 .dark .link,
 .dark .link:hover {
   background: var(--on-dark-divider);

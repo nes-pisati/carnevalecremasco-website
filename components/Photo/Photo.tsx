@@ -16,9 +16,10 @@ type PhotoProps = {
   sizes: string;
   className?: string;
   preload?: boolean;
+  fit?: "cover" | "contain";
 };
 
-export function Photo({ photo, placeholderColor, sizes, className, preload = false }: PhotoProps) {
+export function Photo({ photo, placeholderColor, sizes, className, preload = false, fit = "cover" }: PhotoProps) {
   const classes = [styles.photo, styles[placeholderColor], className].filter(Boolean).join(" ");
   if (!photo.file) {
     return <span role="img" aria-label={photo.alt} className={classes} />;
@@ -26,7 +27,7 @@ export function Photo({ photo, placeholderColor, sizes, className, preload = fal
   return (
     <span className={classes}>
       <Image
-        className={styles.image}
+        className={`${styles.image} ${styles[fit]}`}
         src={photo.file.url}
         width={photo.file.width}
         height={photo.file.height}

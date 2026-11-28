@@ -22,7 +22,7 @@ export const galleriesMock: Gallery[] = [
       photo("Il gruppo folkloristico boliviano"),
       photo("Il Gagèt apre la sfilata", { eventLabel: "1° corso mascherato 2026" }),
       photo("Bambini in maschera tra i coriandoli"),
-      photo("Il carro Yellow Submarine in Piazza Giovanni XXIII"),
+      photo("Il carro Yellow Submarine in Piazza Giovanni XXIII", { isFeatured: true }),
       photo("La banda in piazza"),
       photo("Il carro Esercito dei selfie"),
       photo("Il pubblico lungo il percorso"),

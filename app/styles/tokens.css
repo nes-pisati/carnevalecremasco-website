@@ -273,7 +273,6 @@
   --load-more-space: var(--space-40);
   --bento-row-height: 150px;
   --bento-gap: var(--space-10);
-  --play-disc-size: 64px;
   --sponsors-radius: 32px;
   --sponsors-padding: var(--space-24) var(--space-22);
   --sponsors-gap: var(--space-18);
@@ -386,6 +385,13 @@
   --attachment-padding: var(--space-14);
   --attachment-gap: var(--space-14);
   --attachment-badge-size: 56px;
+  --gallery-row-height: 160px;
+  --gallery-gap: var(--space-10);
+  --zoom-inset: var(--space-8);
+  --lightbox-padding: var(--space-16);
+  --lightbox-gap: var(--space-16);
+  --lightbox-control-size: var(--control-height-sm);
+  --lightbox-media-radius: var(--radius-media);
 
   --z-raised: 1;
   --z-header: 20;
@@ -561,5 +567,12 @@
     --step-padding: var(--space-28);
     --step-min-height: 240px;
     --attachment-gap: var(--space-16);
+    --gallery-row-height: 260px;
+    --gallery-gap: var(--space-14);
+    --zoom-inset: var(--space-10);
+    --lightbox-padding: var(--space-28);
+    --lightbox-gap: var(--space-20);
+    --lightbox-control-size: 56px;
+    --lightbox-media-radius: var(--radius-card);
   }
 }
