@@ -1,11 +1,7 @@
 import { newsMock } from "./mock/news";
-import type { NewsArticle, NewsTag, PartialDate } from "./types";
+import type { NewsArticle, NewsSummary, PartialDate } from "./types";
 
-export const newsTagLabels: Record<NewsTag, string> = {
-  news: "News",
-  eventi: "Eventi",
-  progetti: "Progetti",
-};
+export { newsTagLabels, newsTags } from "./newsTags";
 
 function dateSortKey(date: PartialDate | null): number {
   if (!date) return Number.NEGATIVE_INFINITY;
@@ -14,6 +10,17 @@ function dateSortKey(date: PartialDate | null): number {
 
 export async function getNews(): Promise<NewsArticle[]> {
   return [...newsMock].sort((a, b) => dateSortKey(b.date) - dateSortKey(a.date));
+}
+
+function toSummary(article: NewsArticle): NewsSummary {
+  const summary: Partial<NewsArticle> = { ...article };
+  delete summary.body;
+  return summary as NewsSummary;
+}
+
+export async function getNewsSummaries(): Promise<NewsSummary[]> {
+  const news = await getNews();
+  return news.map(toSummary);
 }
 
 export async function getLatestNews(count: number): Promise<NewsArticle[]> {

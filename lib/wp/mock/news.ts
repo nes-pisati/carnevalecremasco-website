@@ -11,6 +11,7 @@ export const newsMock: NewsArticle[] = [
     cover: { alt: "Foto: tortelli cremaschi sul banco della festa", file: placeholderImage("chiacchiere-e-tortelli-torna-in-piazza-aldo-moro", PHOTO_SIZE.landscape) },
     readingMinutes: null,
     recapEditionYear: null,
+    isFeatured: true,
     body: [],
   },
   {
@@ -22,6 +23,7 @@ export const newsMock: NewsArticle[] = [
     cover: { alt: "Foto: il carro Ai-Guana festeggia la vittoria tra i coriandoli", file: placeholderImage("ai-guana-e-il-re-carnevale-2026", PHOTO_SIZE.landscape) },
     readingMinutes: null,
     recapEditionYear: 2026,
+    isFeatured: false,
     body: [
       {
         type: "paragraph",
@@ -64,6 +66,7 @@ export const newsMock: NewsArticle[] = [
     cover: { alt: "Foto: l’orchestra di fiati sul palco del Teatro San Domenico", file: placeholderImage("gran-gala-del-carnevale-al-teatro-san-domenico", PHOTO_SIZE.landscape) },
     readingMinutes: null,
     recapEditionYear: null,
+    isFeatured: false,
     body: [
       {
         type: "paragraph",
@@ -111,6 +114,7 @@ export const newsMock: NewsArticle[] = [
     cover: { alt: "Foto: la presentazione in Regione Lombardia", file: placeholderImage("presentata-in-regione-la-38-edizione", PHOTO_SIZE.landscape) },
     readingMinutes: null,
     recapEditionYear: null,
+    isFeatured: false,
     body: [],
   },
   {
@@ -122,6 +126,7 @@ export const newsMock: NewsArticle[] = [
     cover: { alt: "Foto: ragazzi al lavoro sulla cartapesta", file: placeholderImage("i-laboratori-del-carnevale-nei-campi-estivi", PHOTO_SIZE.landscape) },
     readingMinutes: null,
     recapEditionYear: null,
+    isFeatured: false,
     body: [],
   },
 ];

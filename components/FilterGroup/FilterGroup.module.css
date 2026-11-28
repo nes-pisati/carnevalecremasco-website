@@ -1,0 +1,38 @@
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-8);
+  overflow-x: auto;
+  margin: calc(-1 * var(--focus-ring-space));
+  padding: var(--focus-ring-space);
+}
+
+.filter {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: var(--control-height-sm);
+  padding: 0 var(--filter-padding-inline);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--surface-raised);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-button-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-button-leading);
+  cursor: pointer;
+}
+
+.selected {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+
+@media (min-width: 901px) {
+  .filters {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}

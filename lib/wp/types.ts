@@ -137,5 +137,8 @@ export type NewsArticle = {
   cover: Photo;
   readingMinutes: number | null;
   recapEditionYear: number | null;
+  isFeatured: boolean;
   body: ArticleBlock[];
 };
+
+export type NewsSummary = Omit<NewsArticle, "body">;

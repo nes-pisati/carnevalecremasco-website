@@ -69,6 +69,10 @@
   --text-news-title-size: 1.1875rem;
   --text-news-title-leading: 1.25;
 
+  --text-feature-title-size: 1.25rem;
+  --text-feature-title-leading: 1.15;
+  --text-feature-title-tracking: -0.3px;
+
   --text-lead-size: 1.0625rem;
   --text-lead-leading: 1.55;
 
@@ -250,6 +254,23 @@
   --carro-body-padding: 0 var(--space-12) var(--space-14);
   --news-media-height: 190px;
   --news-body-padding: 0 var(--space-14) var(--space-18);
+  --feature-gap: var(--space-14);
+  --feature-media-min-height: 210px;
+  --feature-body-gap: var(--space-10);
+  --feature-body-padding: 0 var(--space-14) var(--space-18);
+  --filter-padding-inline: var(--space-20);
+  --focus-ring-space: calc(var(--focus-ring-width) + var(--focus-ring-offset));
+  --filters-space: var(--space-32);
+  --empty-padding: var(--space-40) var(--space-24);
+  --empty-art-width: 120px;
+  --empty-art-height: 80px;
+  --empty-disc-size: 64px;
+  --empty-half-width: 80px;
+  --empty-tile-size: 34px;
+  --empty-tile-left: 52px;
+  --empty-tile-top: var(--space-8);
+  --empty-tile-radius: 10px;
+  --load-more-space: var(--space-40);
   --bento-row-height: 150px;
   --bento-gap: var(--space-10);
   --play-disc-size: 64px;
@@ -356,6 +377,9 @@
 
     --text-heading-day-size: 1.5rem;
 
+    --text-feature-title-size: 1.875rem;
+    --text-feature-title-tracking: -1px;
+
 
     --text-stat-number-size: 1.875rem;
 
@@ -439,6 +463,11 @@
     --carro-body-padding: 0 var(--space-10) var(--space-12);
     --news-media-height: 210px;
     --news-body-padding: 0 var(--space-14) var(--space-16);
+    --feature-gap: var(--space-32);
+    --feature-media-min-height: 380px;
+    --feature-body-gap: var(--space-16);
+    --feature-body-padding: var(--space-24) var(--space-32) var(--space-24) 0;
+    --empty-padding: var(--space-56) var(--space-32);
     --bento-row-height: 220px;
     --bento-gap: var(--space-14);
     --sponsors-radius: var(--radius-panel);

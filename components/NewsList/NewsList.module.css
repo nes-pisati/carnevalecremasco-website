@@ -1,0 +1,23 @@
+.filters {
+  margin-bottom: var(--filters-space);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-grid-gap);
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+  margin-top: var(--load-more-space);
+}
+
+.meta {
+  color: var(--text-subtle);
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-leading);
+}
