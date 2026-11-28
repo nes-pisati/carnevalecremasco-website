@@ -23,6 +23,7 @@ import {
   routes,
   withAnchor,
 } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { visitInfoCards } from "@/lib/visitInfo";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import styles from "./page.module.css";
@@ -67,10 +68,12 @@ const parkings = [
   },
 ] as const;
 
-export const metadata: Metadata = {
-  title: "Informazioni · Carnevale Cremasco",
-  description: "Percorso dei carri, biglietti, come arrivare e dove parcheggiare per la sfilata del Carnevale Cremasco.",
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Informazioni",
+  description:
+    "Percorso dei carri, biglietti, come arrivare e dove parcheggiare per la sfilata del Carnevale Cremasco.",
+  path: routes.informazioni,
+});
 
 export default async function InformazioniPage() {
   const edition = await getCurrentEdition();

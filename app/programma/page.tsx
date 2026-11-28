@@ -22,6 +22,7 @@ import { Stack } from "@/components/Stack/Stack";
 import { formatMonthsSpan, formatOrdinal, formatTimeRange, formatTimeRangeLong } from "@/lib/format";
 import { toTelHref } from "@/lib/phone";
 import { informazioniSections, programmaSections, routes, withAnchor } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { carnivalEventJsonLd } from "@/lib/structuredData";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import { getEvents } from "@/lib/wp/events";
@@ -34,10 +35,11 @@ const marketProducts = ["Tortelli cremaschi", "Salva cremasco", "Salame cremasco
 
 export async function generateMetadata(): Promise<Metadata> {
   const edition = await getCurrentEdition();
-  return {
-    title: `Programma ${edition.year} · Carnevale Cremasco`,
+  return pageMetadata({
+    title: `Programma ${edition.year}`,
     description: "Le domeniche del Carnevale Cremasco nel centro di Crema: cosa succede, dove e a che ora.",
-  };
+    path: routes.programma,
+  });
 }
 
 export default async function ProgrammaPage() {

@@ -112,7 +112,14 @@ export function SponsorSlider({ label, items }: SponsorSliderProps) {
           </button>
         </div>
       </div>
-      <ul ref={trackRef} role="list" className={styles.track} onScroll={handleScroll}>
+      <ul
+        ref={trackRef}
+        role="list"
+        aria-label={label}
+        tabIndex={scrollable ? 0 : undefined}
+        className={styles.track}
+        onScroll={handleScroll}
+      >
         {items.map((item) => (
           <li key={item.key} className={styles.slide}>
             {item.content}

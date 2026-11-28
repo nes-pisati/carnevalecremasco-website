@@ -6,6 +6,7 @@
 
 .cell {
   display: flex;
+  min-width: 0;
 }
 
 .card {
@@ -13,6 +14,7 @@
   flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 0;
   gap: var(--info-card-gap);
   min-height: var(--info-card-min-height);
   padding: var(--info-card-padding);
@@ -43,6 +45,7 @@
   font-weight: var(--weight-bold);
   line-height: var(--text-card-title-leading);
   overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .text {

@@ -47,6 +47,9 @@
 }
 
 .address a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--footer-link-height);
   color: var(--on-dark);
 }
 

@@ -7,7 +7,9 @@ import { NewsGrid } from "@/components/NewsCard/NewsCard";
 import { Section } from "@/components/Section/Section";
 import { SectionHeader } from "@/components/SectionHeader/SectionHeader";
 import { ShareBar } from "@/components/ShareBar/ShareBar";
-import { routes } from "@/lib/routes";
+import { partialDateToIso } from "@/lib/format";
+import { newsArticleRoute, routes } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { newsArticleJsonLd } from "@/lib/structuredData";
 import { getNewsArticle, getNewsSlugs, getOtherNews } from "@/lib/wp/news";
 import { getSiteSettings } from "@/lib/wp/site";
@@ -28,19 +30,13 @@ export async function generateMetadata({ params }: PageProps<"/news/[slug]">): P
   const article = await getNewsArticle(slug);
   if (!article) return {};
 
-  const cover = article.cover.file;
-  return {
-    title: `${article.title} · Carnevale Cremasco`,
+  return pageMetadata({
+    title: article.title,
     description: article.excerpt,
-    openGraph: {
-      type: "article",
-      title: article.title,
-      description: article.excerpt,
-      ...(cover && {
-        images: [{ url: cover.url, width: cover.width, height: cover.height, alt: article.cover.alt }],
-      }),
-    },
-  };
+    path: newsArticleRoute(article.slug),
+    image: article.cover,
+    article: { publishedTime: article.date ? partialDateToIso(article.date) : undefined },
+  });
 }
 
 export default async function NewsArticlePage({ params }: PageProps<"/news/[slug]">) {

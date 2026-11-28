@@ -3,9 +3,9 @@ import Link from "next/link";
 import { routes } from "@/lib/routes";
 import styles from "./Logo.module.css";
 
-export const LOGO_SRC = "/images/carnevale-cremasco-logo.jpg";
-const LOGO_WIDTH = 600;
-const LOGO_HEIGHT = 444;
+export const LOGO_SRC = "/images/carnevale-cremasco-logo-320.jpg";
+const LOGO_WIDTH = 320;
+const LOGO_HEIGHT = 237;
 
 type LogoProps = {
   className?: string;

@@ -16,6 +16,7 @@ import { StepCardGrid, type StepCardItem } from "@/components/StepCard/StepCard"
 import { Stat } from "@/components/Stat/Stat";
 import { formatOrdinal } from "@/lib/format";
 import { routes, storiaSections } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import { getSiteSettings } from "@/lib/wp/site";
 import styles from "./page.module.css";
@@ -56,11 +57,12 @@ const floatSteps: StepCardItem[] = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Storia del Carnevale · Carnevale Cremasco",
+export const metadata: Metadata = pageMetadata({
+  title: "Storia del Carnevale",
   description:
     "Dalle feste in maschera della Serenissima ai carri di cartapesta di oggi: la storia del Carnevale Cremasco e della maschera del Gagèt.",
-};
+  path: routes.storia,
+});
 
 export default async function StoriaPage() {
   const [edition, site] = await Promise.all([getCurrentEdition(), getSiteSettings()]);

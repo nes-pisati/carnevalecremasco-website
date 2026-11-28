@@ -86,6 +86,7 @@ export function Gallery({ titleId, title, subtitle, photos, credit, pageSize }: 
                 photo={photo}
                 placeholderColor={cyclePlaceholder(index)}
                 sizes={TILE_SIZES[layout]}
+                preload={index === 0}
               />
               <button
                 type="button"

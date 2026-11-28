@@ -5,17 +5,19 @@ import { PageHead } from "@/components/PageHead/PageHead";
 import { Section } from "@/components/Section/Section";
 import { SocialLinks } from "@/components/SocialLinks/SocialLinks";
 import { fotoSections, routes } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { getGalleries } from "@/lib/wp/galleries";
 import { getSiteSettings } from "@/lib/wp/site";
 import styles from "./page.module.css";
 
 const GALLERY_PAGE_SIZE = 10;
 
-export const metadata: Metadata = {
-  title: "Foto · Carnevale Cremasco",
+export const metadata: Metadata = pageMetadata({
+  title: "Foto",
   description:
     "Le immagini più belle delle sfilate: carri, maschere, bande e il pubblico delle domeniche di Carnevale.",
-};
+  path: routes.foto,
+});
 
 export default async function FotoPage() {
   const [galleries, site] = await Promise.all([getGalleries(), getSiteSettings()]);

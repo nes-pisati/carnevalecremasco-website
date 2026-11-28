@@ -10,6 +10,8 @@ import { Section } from "@/components/Section/Section";
 import { SectionHeader } from "@/components/SectionHeader/SectionHeader";
 import { SocialLinks } from "@/components/SocialLinks/SocialLinks";
 import { StatBox } from "@/components/Stat/Stat";
+import { routes } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { getSiteSettings } from "@/lib/wp/site";
 import type { SiteSettings } from "@/lib/wp/types";
 import styles from "./page.module.css";
@@ -77,11 +79,12 @@ function topicContacts(site: SiteSettings): TopicContact[] {
   ];
 }
 
-export const metadata: Metadata = {
-  title: "Contatti · Carnevale Cremasco",
+export const metadata: Metadata = pageMetadata({
+  title: "Contatti",
   description:
     "Telefono, email e indirizzo dell’associazione Carnevale Cremasco ODV e i referenti per biglietti, mercatini, camperisti e stampa.",
-};
+  path: routes.contatti,
+});
 
 export default async function ContattiPage() {
   const site = await getSiteSettings();

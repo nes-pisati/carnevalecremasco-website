@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import { SkipLink } from "@/components/SkipLink/SkipLink";
+import { SITE_NAME, siteUrl, TITLE_TEMPLATE } from "@/lib/seo";
 import "./globals.css";
 
 const unbounded = localFont({
@@ -27,8 +28,11 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Carnevale Cremasco",
+  metadataBase: siteUrl,
+  title: { template: TITLE_TEMPLATE, default: SITE_NAME },
   description: "Il sito ufficiale del Carnevale Cremasco di Crema.",
+  applicationName: SITE_NAME,
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

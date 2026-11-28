@@ -1,4 +1,5 @@
 import { partialDateToIso } from "@/lib/format";
+import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 import type { CarnivalEvent, Edition, NewsArticle, SiteSettings, Time } from "@/lib/wp/types";
 
 const EVENT_TIME_ZONE = "Europe/Rome";
@@ -61,5 +62,37 @@ export function newsArticleJsonLd(article: NewsArticle, site: SiteSettings): Rec
     ...(article.cover.file && { image: [article.cover.file.url] }),
     author: { "@type": "Organization", name: site.organizationName },
     publisher: { "@type": "Organization", name: site.organizationName },
+  };
+}
+
+const LOGO_PATH = "/images/carnevale-cremasco-logo.jpg";
+
+function isPublishedUrl(url: string): boolean {
+  return url.startsWith("http");
+}
+
+export function websiteJsonLd(site: SiteSettings): Record<string, unknown> {
+  const sameAs = site.socialLinks.map((link) => link.url).filter(isPublishedUrl);
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: absoluteUrl("/"),
+        inLanguage: "it-IT",
+      },
+      {
+        "@type": "Organization",
+        name: site.organizationName,
+        url: absoluteUrl("/"),
+        logo: absoluteUrl(LOGO_PATH),
+        email: site.email,
+        telephone: site.phone,
+        address: { "@type": "PostalAddress", streetAddress: site.addressLines.join(", "), ...EVENT_CITY },
+        ...(sameAs.length > 0 && { sameAs }),
+      },
+    ],
   };
 }

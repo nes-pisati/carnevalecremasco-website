@@ -16,6 +16,7 @@ import { Stack } from "@/components/Stack/Stack";
 import { Stat, StatBox } from "@/components/Stat/Stat";
 import { decapitalize, formatPrice } from "@/lib/format";
 import { convenzioniSections, informazioniSections, routes, withAnchor } from "@/lib/routes";
+import { pageMetadata } from "@/lib/seo";
 import { getAgreements } from "@/lib/wp/agreements";
 import { findGroupTicket, getCurrentEdition } from "@/lib/wp/editions";
 import { getSiteSettings } from "@/lib/wp/site";
@@ -43,11 +44,12 @@ function placeColor(index: number) {
   return PLACE_COLORS[index % PLACE_COLORS.length];
 }
 
-export const metadata: Metadata = {
-  title: "Convenzioni · Carnevale Cremasco",
+export const metadata: Metadata = pageMetadata({
+  title: "Convenzioni",
   description:
     "Dove pranzare, dove dormire e le proposte per gruppi e turisti per vivere il Carnevale Cremasco e scoprire Crema.",
-};
+  path: routes.convenzioni,
+});
 
 export default async function ConvenzioniPage() {
   const [restaurants, lodgings, edition, site] = await Promise.all([

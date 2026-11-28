@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Accent } from "@/components/Accent/Accent";
 import { Band } from "@/components/Band/Band";
 import { Button } from "@/components/Button/Button";
@@ -6,6 +7,7 @@ import { DateRibbon } from "@/components/DateRibbon/DateRibbon";
 import { FeaturePanel, StatGrid } from "@/components/FeaturePanel/FeaturePanel";
 import { Hero } from "@/components/Hero/Hero";
 import { InfoCardGrid } from "@/components/InfoCard/InfoCard";
+import { JsonLd } from "@/components/JsonLd/JsonLd";
 import { NewsGrid } from "@/components/NewsCard/NewsCard";
 import { PhotoBento } from "@/components/PhotoBento/PhotoBento";
 import { Pill } from "@/components/Pill/Pill";
@@ -16,6 +18,8 @@ import { SponsorSlider } from "@/components/SponsorSlider/SponsorSlider";
 import { Stat } from "@/components/Stat/Stat";
 import { formatMonthsSpan, formatOrdinal } from "@/lib/format";
 import { informazioniSections, routes, withAnchor } from "@/lib/routes";
+import { pageMetadata, SITE_NAME } from "@/lib/seo";
+import { websiteJsonLd } from "@/lib/structuredData";
 import { visitInfoCards } from "@/lib/visitInfo";
 import { getCurrentEdition } from "@/lib/wp/editions";
 import { getEvents } from "@/lib/wp/events";
@@ -23,9 +27,22 @@ import { getFloats, getLatestRankedEditionYear } from "@/lib/wp/floats";
 import { featuredPhotos, getGalleries } from "@/lib/wp/galleries";
 import { getLatestNews } from "@/lib/wp/news";
 import { getPartners } from "@/lib/wp/partners";
+import { getSiteSettings } from "@/lib/wp/site";
 
 const HOME_FLOATS_COUNT = 5;
 const HOME_NEWS_COUNT = 3;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const edition = await getCurrentEdition();
+  return pageMetadata({
+    title: `${SITE_NAME} ${edition.year} · Carri allegorici nel centro di Crema`,
+    isFullTitle: true,
+    description:
+      "Carri allegorici, gruppi folkloristici, musica e coriandoli: le domeniche del Carnevale Cremasco a Crema. Programma, biglietti, parcheggi e come arrivare.",
+    path: routes.home,
+    image: edition.heroPhoto,
+  });
+}
 
 export default async function Home() {
   const edition = await getCurrentEdition();
@@ -37,9 +54,11 @@ export default async function Home() {
   const bentoPhotos = latestGallery ? featuredPhotos(latestGallery) : [];
   const news = await getLatestNews(HOME_NEWS_COUNT);
   const partners = await getPartners();
+  const site = await getSiteSettings();
 
   return (
     <>
+      <JsonLd data={websiteJsonLd(site)} />
       <Hero
         badges={
           <>
