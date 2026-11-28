@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import styles from "./Pill.module.css";
 
 type PillProps = {
-  tone?: "light" | "red";
+  tone?: "light" | "red" | "pink";
   children: ReactNode;
 };
 

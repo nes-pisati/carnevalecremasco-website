@@ -1,0 +1,32 @@
+.quote {
+  margin-block: var(--space-12);
+  padding: var(--quote-padding);
+  border-radius: var(--radius-card);
+  background: var(--pink);
+  color: var(--ink);
+}
+
+.mark {
+  display: block;
+  height: var(--quote-mark-height);
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: var(--text-quote-mark-size);
+  font-weight: var(--weight-extrabold);
+  line-height: 0.6;
+}
+
+.text {
+  font-family: var(--font-display);
+  font-size: var(--text-quote-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-quote-leading);
+  letter-spacing: var(--text-quote-tracking);
+}
+
+.citation {
+  margin-top: var(--space-14);
+  font-size: var(--text-body-sm-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--text-body-sm-leading);
+}

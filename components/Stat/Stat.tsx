@@ -6,7 +6,7 @@ type StatTone = "light" | "blue" | "cream";
 type StatProps = {
   value: string;
   label: string;
-  tone?: "light" | "blue";
+  tone?: "light" | "blue" | "red";
   valueColor?: "ink" | "red";
   layout?: "stacked" | "inline";
 };

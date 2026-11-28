@@ -1,0 +1,24 @@
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--chapter-gap);
+  padding-bottom: var(--chapter-space);
+  scroll-margin-top: var(--anchor-offset);
+}
+
+.number {
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: var(--text-chapter-number-size);
+  font-weight: var(--weight-extrabold);
+  line-height: var(--text-tag-leading);
+}
+
+.text {
+  font-size: var(--text-copy-size);
+  line-height: var(--text-copy-leading);
+}
+
+.muted {
+  color: var(--text-muted);
+}

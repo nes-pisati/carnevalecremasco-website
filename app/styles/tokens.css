@@ -355,6 +355,38 @@
   --stat-inline-label-max: 287px;
   --visit-gap: var(--space-16);
 
+  --stats-gap: var(--space-12);
+  --stats-item-min: 0;
+  --chapters-gap: var(--space-24);
+  --toc-width: 260px;
+  --toc-sticky-top: var(--space-24);
+  --toc-link-padding: var(--space-4) var(--space-14) var(--space-4) var(--space-4);
+  --chapter-gap: var(--space-20);
+  --chapter-space: var(--space-36);
+  --text-chapter-number-size: 0.875rem;
+  --figure-media-height: 220px;
+  --quote-padding: var(--space-28) var(--space-24) var(--space-24);
+  --text-quote-mark-size: 5rem;
+  --quote-mark-height: var(--space-36);
+  --gaget-band-space: var(--space-40);
+  --gaget-gap: var(--space-28);
+  --gaget-photo-height: 420px;
+  --gaget-photo-radius: 200px 200px var(--radius-card) var(--radius-card);
+  --gaget-disc-size: 110px;
+  --gaget-disc-top: var(--space-40);
+  --gaget-disc-right: -10px;
+  --text-dialect-size: 1.625rem;
+  --text-dialect-leading: 1.1;
+  --text-dialect-tracking: -1px;
+  --step-grid-gap: var(--space-14);
+  --step-padding: var(--space-24);
+  --step-gap: var(--space-14);
+  --step-min-height: 0;
+  --text-step-number-size: 2.25rem;
+  --attachment-padding: var(--space-14);
+  --attachment-gap: var(--space-14);
+  --attachment-badge-size: 56px;
+
   --z-raised: 1;
   --z-header: 20;
   --z-dropdown: 30;
@@ -514,5 +546,20 @@
     --photo-grid-gap: var(--space-12);
     --photo-grid-tile-height: 200px;
     --visit-gap: var(--space-40);
+
+    --stats-gap: var(--space-14);
+    --stats-item-min: 220px;
+    --chapters-gap: var(--space-72);
+    --chapter-space: var(--space-56);
+    --figure-media-height: 380px;
+    --quote-padding: var(--space-36) var(--space-40) var(--space-32);
+    --gaget-gap: var(--space-56);
+    --gaget-photo-height: 620px;
+    --gaget-photo-radius: 300px 300px var(--radius-panel) var(--radius-panel);
+    --text-dialect-size: 2.25rem;
+    --step-grid-gap: var(--space-16);
+    --step-padding: var(--space-28);
+    --step-min-height: 240px;
+    --attachment-gap: var(--space-16);
   }
 }

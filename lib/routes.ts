@@ -19,6 +19,16 @@ export const fotoSections = {
   video: "video",
 } as const;
 
+export const storiaSections = {
+  origini: "origini",
+  rinascita: "rinascita",
+  anniRuggenti: "anni-ruggenti",
+  riflusso: "riflusso",
+  oggi: "oggi",
+  gaget: "gaget",
+  carri: "carri",
+} as const;
+
 export const programmaSections = {
   mercatini: "mercatini",
   camperisti: "camperisti",

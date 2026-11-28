@@ -17,3 +17,8 @@
   color: var(--on-dark);
   font-weight: var(--weight-bold);
 }
+
+.pink {
+  background: var(--pink);
+  color: var(--ink);
+}

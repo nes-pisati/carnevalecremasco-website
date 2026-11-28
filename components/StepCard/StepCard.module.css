@@ -1,0 +1,50 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--step-grid-gap);
+}
+
+.cell {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--step-gap);
+  min-height: var(--step-min-height);
+  padding: var(--step-padding);
+  border-radius: var(--radius-card);
+}
+
+.marker {
+  font-family: var(--font-display);
+  font-size: var(--text-step-number-size);
+  font-weight: var(--weight-extrabold);
+  line-height: 1;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-info-title-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--text-card-title-leading);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.text {
+  font-size: var(--text-info-text-size);
+  line-height: var(--text-body-sm-leading);
+}
+
+@media (min-width: 901px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .title {
+    hyphens: manual;
+  }
+}
