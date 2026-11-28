@@ -393,6 +393,27 @@
   --lightbox-control-size: var(--control-height-sm);
   --lightbox-media-radius: var(--radius-media);
 
+  --article-head-padding-top: var(--space-20);
+  --article-head-padding-bottom: var(--space-28);
+  --article-head-gap: var(--space-14);
+  --article-title-max: 900px;
+  --article-hero-height: 260px;
+  --article-hero-radius: var(--radius-card);
+  --article-body-space: var(--space-32);
+  --article-body-gap: var(--space-28);
+  --article-side-width: 200px;
+  --article-prose-max: 760px;
+  --prose-gap: var(--space-18);
+  --prose-heading-space: var(--space-12);
+  --text-intro-size: 1.125rem;
+  --text-intro-leading: 1.55;
+  --article-gallery-gap: var(--space-10);
+  --article-gallery-tile-height: 140px;
+  --share-padding-start: var(--space-12);
+  --share-padding-end: var(--space-18);
+  --carro-grid-gap: var(--space-14);
+  --carro-grid-media-height: 130px;
+
   --z-raised: 1;
   --z-header: 20;
   --z-dropdown: 30;
@@ -574,5 +595,20 @@
     --lightbox-gap: var(--space-20);
     --lightbox-control-size: 56px;
     --lightbox-media-radius: var(--radius-card);
+
+    --article-head-padding-top: var(--space-40);
+    --article-head-padding-bottom: var(--space-40);
+    --article-head-gap: var(--space-20);
+    --article-hero-height: 600px;
+    --article-hero-radius: var(--radius-panel);
+    --article-body-space: var(--space-64);
+    --article-body-gap: var(--space-64);
+    --prose-gap: var(--space-22);
+    --prose-heading-space: var(--space-20);
+    --text-intro-size: 1.25rem;
+    --article-gallery-gap: var(--space-12);
+    --article-gallery-tile-height: 200px;
+    --carro-grid-gap: var(--space-16);
+    --carro-grid-media-height: var(--carro-media-height);
   }
 }

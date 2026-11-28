@@ -4,7 +4,7 @@ import styles from "./CaptionedPhoto.module.css";
 
 type CaptionedPhotoProps = {
   photo: PhotoData;
-  caption: string;
+  caption?: string;
   placeholderColor: PhotoPlaceholderColor;
   sizes: string;
 };
@@ -13,7 +13,7 @@ export function CaptionedPhoto({ photo, caption, placeholderColor, sizes }: Capt
   return (
     <figure className={styles.figure}>
       <Photo photo={photo} placeholderColor={placeholderColor} sizes={sizes} className={styles.media} />
-      <figcaption className={styles.caption}>{caption}</figcaption>
+      {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>
   );
 }

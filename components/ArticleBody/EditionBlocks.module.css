@@ -1,0 +1,3 @@
+.anchored {
+  scroll-margin-top: var(--anchor-offset);
+}

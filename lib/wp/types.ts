@@ -126,7 +126,10 @@ export type ArticleBlock =
       fileType: string;
       sizeInBytes: number | null;
     }
-  | { type: "gallery"; title: string; credit: string | null; photos: Photo[] };
+  | { type: "gallery"; title: string; credit: string | null; photos: Photo[] }
+  | { type: "image"; photo: Photo; caption: string | null; credit: string | null }
+  | { type: "floatRanking"; editionYear: number }
+  | { type: "editionGallery"; editionYear: number };
 
 export type NewsArticle = {
   slug: string;
@@ -135,8 +138,6 @@ export type NewsArticle = {
   title: string;
   excerpt: string;
   cover: Photo;
-  readingMinutes: number | null;
-  recapEditionYear: number | null;
   isFeatured: boolean;
   body: ArticleBlock[];
 };

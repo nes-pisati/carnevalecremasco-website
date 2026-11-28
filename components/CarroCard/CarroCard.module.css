@@ -68,7 +68,18 @@
   scroll-snap-align: start;
 }
 
+.grid {
+  --carro-media-height: var(--carro-grid-media-height);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--carro-grid-gap);
+}
+
 @media (min-width: 901px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .scroller {
     overflow-x: visible;
     padding-bottom: 0;

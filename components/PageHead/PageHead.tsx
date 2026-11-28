@@ -17,7 +17,7 @@ type PageHeadProps = {
   children?: ReactNode;
 };
 
-function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
     <nav aria-label="Percorso">
       <ol role="list" className={styles.crumb}>

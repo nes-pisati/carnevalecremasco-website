@@ -1,4 +1,5 @@
-import type { CarnivalEvent, Edition, SiteSettings, Time } from "@/lib/wp/types";
+import { partialDateToIso } from "@/lib/format";
+import type { CarnivalEvent, Edition, NewsArticle, SiteSettings, Time } from "@/lib/wp/types";
 
 const EVENT_TIME_ZONE = "Europe/Rome";
 const EVENT_CITY = { addressLocality: "Crema", addressRegion: "CR", addressCountry: "IT" } as const;
@@ -47,5 +48,18 @@ export function carnivalEventJsonLd(
           priceCurrency: "EUR",
         })),
       }),
+  };
+}
+
+export function newsArticleJsonLd(article: NewsArticle, site: SiteSettings): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.excerpt,
+    ...(article.date && { datePublished: partialDateToIso(article.date) }),
+    ...(article.cover.file && { image: [article.cover.file.url] }),
+    author: { "@type": "Organization", name: site.organizationName },
+    publisher: { "@type": "Organization", name: site.organizationName },
   };
 }
